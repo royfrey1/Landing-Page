@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PRODUCTOS_DATA } from '../data/productos';
+import { PRODUCTOS_DATA } from '../data/Productos';
 import { Eye, ArrowUpRight } from 'lucide-react';
 import ModalConsulta from './ModalCons';
 
