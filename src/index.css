@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Estructura general de la página */
+  --color-trend-black: var(--bg-main, #0B0B0B);
+  --color-trend-gray: var(--bg-card, #161616);
+  --color-trend-light-gray: var(--text-muted, #A0A0A0);
+  
+  /* Acentos y Capsulas */
+  --color-trend-neon: var(--accent-neon, #CCFF00);
+  --color-trend-dark-green: var(--accent-dark, #122315);
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes modalUp {
+    0% { 
+      transform: translateY(24px) scale(0.96); 
+      opacity: 0; 
+    }
+    100% { 
+      transform: translateY(0) scale(1); 
+      opacity: 1; 
+    }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+body {
+  background-color: var(--color-trend-black);
+  /* 💡 Controlamos el color de texto general desde la variable dinámica */
+  color: var(--text-main, #F5F5F5);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Evitamos que los títulos en el Hero o Navbar queden clavados en blanco */
+h1, h2, h3, span, button {
+  transition: color 0.3s ease;
+}
